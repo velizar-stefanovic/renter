@@ -1,4 +1,4 @@
-<img src="https://www.firstpost.com/wp-content/uploads/2022/07/shutterstock_1499350838-1-scaled-1.jpg" style="max-width:500px; max-height:500px;">
+![cover photo](https://www.firstpost.com/wp-content/uploads/2022/07/shutterstock_1499350838-1-scaled-1.jpg)
 
 ### RENTER - Real Estate Price Prediction Tool
 
