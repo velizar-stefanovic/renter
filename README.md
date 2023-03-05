@@ -1,4 +1,4 @@
-![Renter logo](https://i.postimg.cc/Yqz7T3Rw/Renter-logos.jpg)
+<img src="https://i.postimg.cc/Yqz7T3Rw/Renter-logos.jpg" width="250" height="250">
 
 # Renter - Real Estate Price Prediction Tool
 
