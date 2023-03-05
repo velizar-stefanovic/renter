@@ -36,6 +36,9 @@ def translate_to_utf(word):
     return word.translate(str.maketrans(dict))
 
 
+# TODO think about providing only property_ids, and not URLs...?
+
+
 def fetch_property_data(list_of_urls):
     """
     This functions scrapes the property data from the

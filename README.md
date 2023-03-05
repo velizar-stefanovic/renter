@@ -6,12 +6,12 @@ RENTER is a machine learning project that aims to predict the asking price of re
 
 RENTER finds the best deals on properties by identifying undervalued rentals. By predicting the asking price of a property, RENTER can estimate when a property is undervalued, i.e. predicted asking price is higher (by a certain margin) than the actual asking price.
 
-The models have been trained on the collected dataset to predict the asking price of a rental property based on various features such as location, size, number of rooms, etc.
+The models have been trained on the collected dataset to predict the asking price of a rental property based on various features such as property location, size, number of rooms, etc.
 
 - ML Models: Linear Regression, Decision Trees
 - Stack: AWS + Python + Web Scraping
 
-### Problem Definintion
+### Problem Definition
 
 The demand for real estate properties in Belgrade has been skyrocketing recently, making it challenging for renters to find the right property at the right price.
 
@@ -29,6 +29,12 @@ The focus was on rental properties in Belgrade, Serbia (~4500 properties), and o
 
 ### Project status
 
-1. DONE - Schedule fetch_ids execution that runs on a daily basis using AWS Lambda, and store its result on AWS S3 as .csv file ✅
+1. **DONE** - Schedule fetch_ids execution that fetches property IDs of all active properties, on a daily basis, using AWS Lambda, and store its result in `property-ids-fetch` S3 bucket as CSV file.
 
-2. WIP - As soon as new .csv file is uploaded to S3, run scrape_data execution using AWS Lambda which
+2. **WIP** - As soon as new CSV file is uploaded to `property-ids-fetch` S3 bucket, run scrape_data execution using AWS Lambda, which scrapes the data from newly created property webpages, and stores it in `property-data-fetch` S3 bucket as CSV file.
+
+3. As soon new CSV file is uploaded to `property-data-fetch` S3 bucket, run clean_data execution using AWS Lambda, which cleans the data and prepares it for analysis. Clean data is stored in `clean-data` S3 bucket as CSV file.
+
+4. Use data from `clean-data` S3 bucket and AWS Sagemaker, to build and train ML models.
+
+5. Create a webpage with a dashboard, that would take input parameters (such as property location, size, number of rooms, etc.) and would provide you with a list of undervalued renting properties.
