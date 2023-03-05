@@ -1,4 +1,4 @@
-<img src="https://i.postimg.cc/Yqz7T3Rw/Renter-logos.jpg" width="250" height="250">
+![cover photo](https://www.firstpost.com/wp-content/uploads/2022/07/shutterstock_1499350838-1-scaled-1.jpg)
 
 # Renter - Real Estate Price Prediction Tool
 
