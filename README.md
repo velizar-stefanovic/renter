@@ -26,3 +26,9 @@ The competition for rental properties with the "right price" is high, and people
 The dataset used in this project was collected by a crawler from the popular real estate website www.nekretnine.rs
 
 The focus was on rental properties in Belgrade, Serbia (~4500 properties), and on structured data (property location, size, number of rooms etc.) - images were not included.
+
+### Project status
+
+1. DONE - Schedule fetch_ids execution that runs on a daily basis using AWS Lambda, and store its result on AWS S3 as .csv file ✅
+
+2. WIP - As soon as new .csv file is uploaded to S3, run scrape_data execution using AWS Lambda which

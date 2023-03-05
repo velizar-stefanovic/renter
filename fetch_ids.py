@@ -7,14 +7,30 @@ import pandas as pd
 
 
 def fetch_property_ids(event, context):
+    """
+    This function goes to the www.nekretnine.rs webpage that
+    contains renting properties, fetches the ids of all
+    existing properties, and stores them in CSV file in
+    property-ids-fetch S3 bucket.
+
+    Args:
+        event object: information about the event
+        context object:information about the invocation, function
+            configuration and execution environment
+
+    Returns:
+        status code, number of pages it fetched property ids from,
+        number of properties fetched, execution running time.
+    """
+
+    start_time = time.time()
     bucket_name = "property-ids-fetch"
     s3 = boto3.client("s3")
     starting_url = "https://www.nekretnine.rs/stambeni-objekti/stanovi/izdavanje-prodaja/izdavanje/grad/beograd/lista/po-stranici/10/"
-    pages = 500
-    start_time = time.time()
+    pages = 1000
     page_count = 0
     empty_page = 0
-    property_ids = list()
+    property_ids = []
 
     for i in range(1, pages + 1):
 
