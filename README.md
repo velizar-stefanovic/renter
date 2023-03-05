@@ -23,6 +23,6 @@ The competition for rental properties with the "right price" is high, and people
 
 ### Dataset
 
-The dataset used in this project was collected by a crawler from the popular real estate website, www.nekretnine.rs
+The dataset used in this project was collected by a crawler from the popular real estate website www.nekretnine.rs
 
 The focus was on rental properties in Belgrade, Serbia (~4500 properties), and on structured data (property location, size, number of rooms etc.) - images were not included.
